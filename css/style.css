@@ -1,0 +1,326 @@
+/* --- DARK MODE GLOBAL OVERRIDES --- */
+[data-bs-theme="dark"] body {
+    background-color: #002740 !important;
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .filter-card {
+    background-color: #002740 !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-bs-theme="dark"] .filter-card input,
+[data-bs-theme="dark"] .filter-card select {
+    background-color: #001a2b;
+    border-color: #4a5568;
+    color: white;
+}
+
+/* --- HERO SECTION LOGIC --- */
+
+/* 1. Default (Light Mode) */
+/* This applies when the theme is NOT dark */
+.hero-section {
+    background-color: #ffffff;
+    /* Light gray background */
+    color: #212529;
+    /* Dark text for readability */
+    min-height: 40vh;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+/* Add this to your CSS */
+.hero-section h1 {
+    font-size: clamp(2.3rem, 4.5vw, 4.5rem);
+    line-height: 1.1;
+    word-wrap: break-word;
+    /* Ensures it breaks if it absolutely has to */
+}
+
+/* 2. Dark Mode Override */
+/* This forces the blue background when the switch is flipped */
+[data-bs-theme="dark"] .hero-section {
+    background-color: #002740 !important;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- OTHER COMPONENTS --- */
+
+/* --- 1. BASE STYLES (Light Mode Default) --- */
+.cat-card {
+    background-color: #ffffff;
+    color: #212529;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    /* Light subtle border */
+
+    /* YOUR ORIGINAL TRANSITION LOGIC */
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.icon-glow {
+    transition: color 0.3s ease, transform 0.3s ease;
+    color: #6c757d;
+    /* Grey by default */
+}
+
+/* --- BASE CARD STYLES --- */
+.cat-card {
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background-color: #ffffff;
+    /* Default Light Mode */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Image Transition Logic */
+.cat-card .cat-img {
+    transition: transform 0.3s ease;
+}
+
+/* --- HOVER EFFECTS --- */
+.cat-card:hover {
+    transform: translateY(-5px);
+    border-color: #ffc107 !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Zoom the image when the card is hovered */
+.cat-card:hover .cat-img {
+    transform: scale(1.1);
+    /* Zooms image by 10% */
+}
+
+/* --- DARK MODE OVERRIDES --- */
+[data-bs-theme="dark"] .cat-card {
+    background-color: #001a2b !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+}
+
+[data-bs-theme="dark"] .cat-card:hover {
+    background-color: #002740 !important;
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.2);
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+
+}
+
+.video-container video {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Make the whole bar taller with more breathing room */
+.benefits-bar {
+    padding: 1rem 0;
+    /* Adds significant space on top and bottom */
+}
+
+/* Scale up the Title and Icon */
+.benefits-bar h5 {
+    font-size: 1.5rem;
+    /* Standard h5 is usually 1.25rem */
+    margin-bottom: 0.5rem;
+}
+
+.benefits-bar i {
+    font-size: 1.8rem;
+    /* Makes the icon slightlFy larger than the text */
+    vertical-align: middle;
+}
+
+/* Scale up the description text */
+.benefits-bar p {
+    font-size: 1.1rem;
+    /* readable size, bigger than "small" */
+    opacity: 0.8;
+    /* cleaner look than text-white-50 */
+}
+
+
+
+/* --- CART PAGE STYLES --- */
+
+/* 1. Base Card Styles */
+.cart-card,
+.summary-card {
+    background-color: #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect on cart items to make them feel interactive */
+.cart-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Remove Button Animation */
+.remove-btn {
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.remove-btn:hover {
+    opacity: 1;
+    text-decoration: underline !important;
+}
+
+/* --- 2. DARK MODE OVERRIDES --- */
+[data-bs-theme="dark"] .cart-card,
+[data-bs-theme="dark"] .summary-card {
+    background-color: #001a2b !important;
+    /* Slightly lighter than body bg */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff;
+}
+
+/* Fix the image background in dark mode */
+[data-bs-theme="dark"] .bg-light-subtle {
+    background-color: #002740 !important;
+    /* Matches main body bg */
+}
+
+/* Adjust Select Inputs in Dark Mode */
+[data-bs-theme="dark"] .form-select {
+    background-color: #002740;
+    border-color: #4a5568;
+    color: white;
+}
+
+/* Adjust Text Colors */
+[data-bs-theme="dark"] .text-muted {
+    color: #adb5bd !important;
+}
+
+
+
+/* --- CHECKOUT STYLES --- */
+
+/* 1. Form Inputs */
+.form-control,
+.form-select {
+    padding: 0.75rem 1rem;
+    /* Taller, more clickable inputs */
+    border-radius: 8px;
+    /* Modern rounded corners */
+    border: 1px solid #dee2e6;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #ffc107;
+    /* Warning yellow focus border */
+    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+}
+
+/* 2. Dark Mode Form Overrides */
+[data-bs-theme="dark"] .checkout-card {
+    background-color: #001a2b !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select {
+    background-color: #002740;
+    border-color: #4a5568;
+    color: white;
+}
+
+[data-bs-theme="dark"] .form-control::placeholder {
+    color: #6c757d;
+}
+
+[data-bs-theme="dark"] .card-header {
+    border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+
+
+/* --- LOGIN / SIGNUP CARD STYLES --- */
+
+/* 1. Card Base */
+.login-card {
+    border-radius: 1rem;
+    /* Softer, modern corners */
+    transition: transform 0.3s ease;
+}
+
+/* 2. Form Inputs (Making them look like a single unit with the icon) */
+.login-card .input-group-text {
+    border-color: #dee2e6;
+}
+
+.login-card .form-control {
+    border-color: #dee2e6;
+    box-shadow: none !important;
+    /* Removes default blue glow */
+}
+
+/* When clicking the input, highlight the border and the icon */
+.login-card .form-control:focus {
+    border-color: #ffc107;
+}
+
+.login-card .form-control:focus+.input-group-text,
+.login-card .input-group:focus-within .input-group-text {
+    border-color: #ffc107;
+    color: #ffc107 !important;
+}
+
+/* --- DARK MODE OVERRIDES --- */
+[data-bs-theme="dark"] .login-card {
+    background-color: #001a2b !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .login-card .text-muted {
+    color: #adb5bd !important;
+}
+
+[data-bs-theme="dark"] .login-card .input-group-text {
+    background-color: #002740;
+    border-color: #4a5568;
+    color: #adb5bd;
+}
+
+[data-bs-theme="dark"] .login-card .form-control {
+    background-color: #002740;
+    border-color: #4a5568;
+    color: #ffffff;
+}
+
+/* Adjust the icon circle background in dark mode */
+[data-bs-theme="dark"] .bg-warning-subtle {
+    background-color: rgba(255, 193, 7, 0.2) !important;
+    color: #ffc107 !important;
+}
+
+
+
+/* Ensure Select Inputs match the dark theme */
+[data-bs-theme="dark"] .form-select {
+    background-color: #002740;
+    border-color: #4a5568;
+    color: white;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+/* Section Dividers in Dark Mode */
+[data-bs-theme="dark"] .border-bottom {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
