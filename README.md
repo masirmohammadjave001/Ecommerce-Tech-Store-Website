@@ -13,11 +13,5 @@ Our Computer Store Final project for COSC2956
 Name: Masir Javed
 Student ID: 249661300
 
-Name: Mohammed Shaikh
-Student ID: 249502810
-
-Name: Ibrahim Naveed
-Student ID: 5147647
-
 ## Youtube Link
 https://youtu.be/Tue3136M8Dw
